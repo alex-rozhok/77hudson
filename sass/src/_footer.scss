@@ -1,0 +1,14 @@
+.footer {
+  padding: 40px 0;
+  background: var(--secondary_color);
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  a {
+    color: var(--third_text);
+    &:hover {
+      color: var(--primary_text);
+    }
+  }
+}

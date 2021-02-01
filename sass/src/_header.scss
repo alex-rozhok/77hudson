@@ -1,0 +1,93 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  background: rgba(var(--third_color_values), .9);
+  border-bottom: 1px solid $navbar_toggle;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+  z-index: 5;
+  &__show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    img {
+      max-height: 70px;
+    }
+  }
+
+  .navbar {
+    &__toggle {
+      @media (min-width: $tablet-min) {
+        display: none;
+      }
+      padding: 10px;
+      border: 1px solid $navbar_toggle;
+      border-radius: 4px;
+      &.active,
+      &:hover {
+        border-color: darken($navbar_toggle, 50%);
+        .navbar__icon {
+          background: darken($navbar_toggle, 50%);
+        }
+      };
+    }
+    &__icon {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: $navbar_toggle;
+      & + .navbar__icon {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__nav {
+    @media (max-width: 767px) {
+      position: absolute;
+      width: 100%;
+      top: calc(100% + 1px);
+      left: 0;
+      background: rgba(var(--third_color_values), .9);
+      border-bottom: 1px solid $navbar_toggle;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease-in-out;
+      &.expanded {
+        max-height: 100vh;
+      }
+    }
+  }
+  ul {
+    padding-bottom: 10px;
+    text-align: left;
+    @media (min-width: $tablet-min) {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+    a {
+      font-size: 20px;
+      display: inline-block;
+      padding: 10px;
+      color: var(--primary_text);
+      @media (min-width: $tablet-min) {
+        padding: 15px;
+      }
+      &:hover {
+        color: var(--secondary_text);
+      }
+    }
+  }
+}

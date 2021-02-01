@@ -1,0 +1,93 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $primary_font;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+a {
+  transition: $transition;
+  outline: transparent;
+}
+button {
+  background: none;
+  cursor: pointer;
+  outline: transparent;
+}
+
+.banner {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.flickity-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+}
+
+.flickity-button {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: fade-out($third_color, .5);
+    color: $primary_text;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    font-size: 17px;
+    font-family: 'Material Icons';
+    &:hover {
+      color: darken($primary_text, 5%);
+      background: fade-out($third_color, .6);
+    }
+    &.next {
+      &:before {
+        content: "keyboard_arrow_right";
+      }
+    }
+    &.previous {
+      &:before {
+        content: "keyboard_arrow_left";
+      }
+    }
+    
+    &-icon {
+      display: none;
+    }
+  }
+
+.flickity-page-dots {
+  left: 0;
+  bottom: 0;
+}
+
+.anchor {
+  position: absolute;
+}

@@ -1,0 +1,27 @@
+:root {
+
+  //color
+  --primary_color_values: 0, 152, 209;
+  --secondary_color_values: 57, 53, 54;
+  --third_color_values: 255, 255, 255;
+
+  //text color
+  --primary_text_values: 0, 152, 209;
+  --primary__dark_text_values: 0, 115, 158;
+  --secondary_text_values: 57, 53, 54;
+  --third_text_values: 255, 255, 255;
+
+
+
+  // dev
+   --primary_color: rgb(var(--primary_color_values));
+   --secondary_color: rgb(var(--secondary_color_values));
+   --third_color: rgb(var(--third_color_values));
+ 
+ 
+   --primary_text: rgb(var(--primary_text_values));
+   --primary_dark_text: rgb(var(--primary__dark_text_values));
+   --secondary_text: rgb(var(--secondary_text_values));
+   --third_text: rgb(var(--third_text_values));
+
+}
